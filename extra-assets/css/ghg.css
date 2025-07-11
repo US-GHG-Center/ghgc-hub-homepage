@@ -20,14 +20,18 @@ a:hover {
 
 nav {
   background-color: #F9F4F0;
-  padding: 8px 24px 14px 24px;
+  /* padding: 8px 24px 14px 24px; */
 }
-.navbar-brand-wrapper a {
+
+.navbar {
   display: flex;
+  min-height: 126px;
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+.navbar-brand-wrapper a {
   text-decoration: none;
 }
 
@@ -38,7 +42,8 @@ nav {
   letter-spacing: -0.4px;
   color: #1B1B1B;
   padding-top: 12px;
-  padding-left: 10%;
+  padding-left: 1.5rem;
+  margin-left: 14px;
 }
 
 .brand-logo {
