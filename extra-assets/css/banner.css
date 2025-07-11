@@ -1,0 +1,56 @@
+.usa-banner__content#partners-banner .usa-media-block__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 2vw;
+  }
+.usa-banner__content#partners-banner .usa-media-block__body img {
+    flex: 1 1 0;
+    max-width: 20%;
+    height: auto;
+    object-fit: contain;
+    min-width: 0;
+}
+
+.usa-banner__header {
+    background-color: #1b1b1b;
+    color: white;
+    text-decoration: none;
+}
+
+.usa-accordion {
+    background-color: #1b1b1b;
+    color: white;
+}
+.usa-accordion>a {
+    color: inherit;
+}
+.usa-banner__content {
+    background-color: #1b1b1b;
+    color: white;
+    margin-left: 0;
+
+}
+
+.usa-banner__button, .usa-banner__button:hover {
+    color: #dfe1e2;
+}
+.usa-banner__button::after {
+    background-color: #dfe1e2;
+}
+
+.usa-banner__button:hover::after {
+    background-color: #dfe1e2;
+}
+.usa-banner__button[aria-expanded=true]::after{
+    background-color: #dfe1e2;
+}
+.usa-banner__button[aria-expanded=true]:hover::after{
+    background-color: #dfe1e2;
+}
+
+.usa-banner__header {
+    font-size: .75rem;
+    padding: 8px;
+}

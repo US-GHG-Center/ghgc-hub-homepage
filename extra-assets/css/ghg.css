@@ -1,19 +1,25 @@
 body {
   font-size: 16px;
-  font-family: "Inter",sans-serif;
+  font-family: "DM Sans", sans-serif;;
   text-transform: none;
   font-style: normal;
   font-variation-settings: 'pnum' 0;
 }
 a {
-  color: #1565EF;
+  text-decoration: underline;
+  color: inherit;
 }
 a:hover {
   text-decoration: underline;
   color: #1565EF;
 }
+
+.logos>img {
+  padding: 0 10px 0 10px;
+}
+
 nav {
-  background-color: #082a64;
+  background-color: #F9F4F0;
   padding: 8px 24px 14px 24px;
 }
 .navbar-brand-wrapper a {
@@ -27,11 +33,12 @@ nav {
 
 
 .brand {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 600;
   letter-spacing: -0.4px;
-  color: white;
+  color: #1B1B1B;
   padding-top: 12px;
+  padding-left: 10%;
 }
 
 .brand-logo {
@@ -51,8 +58,15 @@ nav {
   text-decoration: none;
 }
 #login-button {
-  background-color: #0B3D91;
+  background-color: #3E4DED;
   border:none;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+#login-button>img {
+  color: white;
 }
 
 h1.lead {
@@ -60,8 +74,14 @@ h1.lead {
   font-weight: 600;
   margin-top: 40px;
 }
+
+.lead>a {
+  text-decoration: underline;
+}
 .footer {
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Public Sans', sans-serif;
 }
 
 /*bootstrap override */
