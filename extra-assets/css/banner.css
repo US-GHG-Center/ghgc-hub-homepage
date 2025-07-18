@@ -137,6 +137,10 @@
     mask-image: url("https://cdnjs.cloudflare.com/ajax/libs/uswds/3.13.0/img/usa-icons/expand_more.svg");
 }
 
+.usa-banner__button[aria-expanded=true]:after {
+    mask-image: url("https://cdnjs.cloudflare.com/ajax/libs/uswds/3.13.0/img/usa-icons/expand_less.svg");
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 640px) {
     .usa-banner__header::before {
