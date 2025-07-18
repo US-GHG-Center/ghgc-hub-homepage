@@ -183,7 +183,7 @@ Login {% endblock %} {% block stylesheet %} {{ super() }}
             width: 100%;
           "
         >
-          <div style="margin: 0 124px 0 0; width: 25%">
+          <div style="margin: 0 124px 0 6px; width: 25%">
             <p>
               The US GHG Center would not be possible without the collaboration
               of the partnering U.S. governmental agencies and other
@@ -220,15 +220,13 @@ Login {% endblock %} {% block stylesheet %} {{ super() }}
 
   <!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/project/uswds_carbon/templates/uswds/government-banner.html.twig' -->
 </section>
-<nav class="navbar navbar-light" style="justify-content: start">
-  <div class="navbar-brand-wrapper">
-    <a href="https://earth.gov/ghgcenter" target="_blank" rel="noopener">
-      <!-- <div class="brand-logo">
-        <img src="https://raw.githubusercontent.com/US-GHG-Center/ghgc-docs/main/logo/ghgc-logo-dark.svg" width="96px"/>
-      </div> -->
-      <span class="brand">U.S. Greenhouse Gas Center</span>
-    </a>
-  </div>
+<nav>
+  <a href="https://earth.gov/ghgcenter" target="_blank" rel="noopener">
+    <!-- <div class="brand-logo">
+      <img src="https://raw.githubusercontent.com/US-GHG-Center/ghgc-docs/main/logo/ghgc-logo-dark.svg" width="96px"/>
+    </div> -->
+    <span class="brand">U.S. Greenhouse Gas Center</span>
+  </a>
 </nav>
 {% endblock %} {% block script %} {{ super() }}
 <script src="{{ static_url('extra-assets/js/login.js') }}"></script>

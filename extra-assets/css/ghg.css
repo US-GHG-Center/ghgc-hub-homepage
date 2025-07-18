@@ -20,7 +20,15 @@ a:hover {
 
 nav {
   background-color: #F9F4F0;
+  min-height: 96px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /* padding: 8px 24px 14px 24px; */
+}
+
+nav a, nav a:hover {
+  text-decoration: none;
 }
 
 .navbar {
@@ -31,9 +39,6 @@ nav {
   -ms-flex-align: center;
   align-items: center;
 }
-.navbar-brand-wrapper a {
-  text-decoration: none;
-}
 
 
 .brand {
@@ -42,26 +47,13 @@ nav {
   letter-spacing: -0.4px;
   color: #1B1B1B;
   padding-top: 12px;
-  padding-left: 1.5rem;
-  margin-left: 14px;
+  padding-left: 6rem;
 }
 
-.brand-logo {
-  display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
-  margin-right: 14px;
-}
-
-.brand-logo span {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: -0.4px;
-  font-size: 16px;
-  line-height: 18px;
+.brand:hover {
   text-decoration: none;
 }
+
 #login-button {
   background-color: #3E4DED;
   border:none;
