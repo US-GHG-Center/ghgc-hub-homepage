@@ -137,7 +137,8 @@
     mask-image: url("https://cdnjs.cloudflare.com/ajax/libs/uswds/3.13.0/img/usa-icons/expand_more.svg");
 }
 
-.usa-banner__button[aria-expanded=true]:after {
+.usa-banner__button[aria-expanded=true]::after {
+    background-color: #dfe1e2;
     mask-image: url("https://cdnjs.cloudflare.com/ajax/libs/uswds/3.13.0/img/usa-icons/expand_less.svg");
 }
 
