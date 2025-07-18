@@ -1,113 +1,226 @@
-{% extends "templates/login.html" %}
-{% block title %}
-  GHG Center JupyterHub - Login
-{% endblock %}
-{% block stylesheet %}
-{{ super() }}
-<link rel="stylesheet" href="{{ static_url('extra-assets/css/login.css') }}" type="text/css"/>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="icon" sizes="any" href="{{ static_url('extra-assets/images/favicon.ico') }}">
-<link rel="stylesheet" href="{{ static_url('extra-assets/css/uswds.min.css') }}">
-<link rel="stylesheet" href="{{ static_url('extra-assets/css/ghg.css') }}" type="text/css"/>
-<link rel="stylesheet" href="{{ static_url('extra-assets/css/banner.css') }}" type="text/css"/>
-{% endblock %}
-
-{% block nav_bar %}
-<section class="usa-banner" aria-label="Official website of the United States government">
-      
-
+{% extends "templates/login.html" %} {% block title %} GHG Center JupyterHub -
+Login {% endblock %} {% block stylesheet %} {{ super() }}
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="{{ static_url('extra-assets/css/login.css') }}"
+  type="text/css"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+  rel="stylesheet"
+/>
+<link
+  rel="icon"
+  sizes="any"
+  href="{{ static_url('extra-assets/images/favicon.ico') }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ static_url('extra-assets/css/uswds.min.css') }}"
+/>
+<link
+  rel="stylesheet"
+  href="{{ static_url('extra-assets/css/ghg.css') }}"
+  type="text/css"
+/>
+<link
+  rel="stylesheet"
+  href="{{ static_url('extra-assets/css/banner.css') }}"
+  type="text/css"
+/>
+{% endblock %} {% block nav_bar %}
+<section
+  class="usa-banner"
+  aria-label="Official website of the United States government"
+>
   <!-- THEME DEBUG -->
   <!-- THEME HOOK: 'government_banner' -->
   <!-- 💡 BEGIN CUSTOM TEMPLATE OUTPUT from 'themes/custom/project/uswds_carbon/templates/uswds/government-banner.html.twig' -->
-  
+
   <div class="usa-banner">
     <div class="usa-accordion">
       <header class="usa-banner__header">
-  
         <div class="grid-row flex-justify flex-align-center">
-                  <div class="grid-col-auto">
+          <div class="grid-col-auto">
             <div class="usa-banner__inner">
               <div class="grid-col-auto">
-                <img class="usa-banner__header-flag" aria-hidden="true" src=" {{ static_url('extra-assets/img/us_flag_small.png') }}" alt="">
+                <img
+                  class="usa-banner__header-flag"
+                  aria-hidden="true"
+                  src=" {{ static_url('extra-assets/img/us_flag_small.png') }}"
+                  alt=""
+                />
               </div>
-              <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
-                <p class="usa-banner__header-text">An official website of the United States government</p>
-                <p class="usa-banner__header-action" aria-hidden="true">Here's how you know</p>
+              <div
+                class="grid-col-fill tablet:grid-col-auto"
+                aria-hidden="true"
+              >
+                <p class="usa-banner__header-text">
+                  An official website of the United States government
+                </p>
+                <p class="usa-banner__header-action" aria-hidden="true">
+                  Here's how you know
+                </p>
               </div>
-              <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+              <button
+                type="button"
+                class="usa-accordion__button usa-banner__button"
+                aria-expanded="false"
+                aria-controls="gov-banner"
+              >
                 <span class="usa-banner__button-text">Here's how you know</span>
               </button>
             </div>
           </div>
-  
-                  <div class="grid-col-auto partners-button-wrapper">
+
+          <div class="grid-col-auto partners-button-wrapper">
             <div class="usa-banner__inner">
-              <div class="grid-col-fill tablet:grid-col-auto" aria-hidden="true">
-                <p class="usa-banner__header-action" aria-hidden="true">A coordinated effort</p>
+              <div
+                class="grid-col-fill tablet:grid-col-auto"
+                aria-hidden="true"
+              >
+                <p class="usa-banner__header-action" aria-hidden="true">
+                  A coordinated effort
+                </p>
               </div>
-              <button type="button" class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="partners-banner">
-                <span class="usa-banner__button-text">A coordinated effort</span>
+              <button
+                type="button"
+                class="usa-accordion__button usa-banner__button"
+                aria-expanded="false"
+                aria-controls="partners-banner"
+              >
+                <span class="usa-banner__button-text"
+                  >A coordinated effort</span
+                >
               </button>
             </div>
           </div>
         </div>
       </header>
-  
-      <div class="usa-banner__content usa-accordion__content" id="gov-banner" hidden="">
+
+      <div
+        class="usa-banner__content usa-accordion__content"
+        id="gov-banner"
+        hidden=""
+      >
         <div class="grid-row grid-gap-lg">
           <div class="usa-banner__guidance tablet:grid-col-6">
-            <img class="usa-banner__icon usa-media-block__img" src=" {{ static_url('extra-assets/img/icon-dot-gov.svg') }}" alt="Dot gov">
+            <img
+              class="usa-banner__icon usa-media-block__img"
+              src=" {{ static_url('extra-assets/img/icon-dot-gov.svg') }}"
+              alt="Dot gov"
+            />
             <div class="usa-media-block__body">
               <p>
                 <strong>Official websites use .gov</strong>
-                <br>
-                A <strong>.gov</strong> website belongs to an official government organization in the United States.
+                <br />
+                A <strong>.gov</strong> website belongs to an official
+                government organization in the United States.
               </p>
             </div>
           </div>
           <div class="usa-banner__guidance tablet:grid-col-6">
-            <img class="usa-banner__icon usa-media-block__img" src=" {{ static_url('extra-assets/img/icon-https.svg') }}" alt="Https">
+            <img
+              class="usa-banner__icon usa-media-block__img"
+              src=" {{ static_url('extra-assets/img/icon-https.svg') }}"
+              alt="Https"
+            />
             <div class="usa-media-block__body">
               <p>
                 <strong>Secure .gov websites use HTTPS</strong>
-                <br>
-                A <strong>lock</strong> (   <span class="icon-lock">
-      <svg xmlns="http://www.w3.org/2000/svg" width="52" height="64" viewBox="0 0 52 64" class="usa-banner__lock-image" role="img" aria-labelledby="banner-lock-description" focusable="false">
-        <title id="banner-lock-title">Lock</title>
-        <desc id="banner-lock-description">Locked padlock</desc>
-        <path fill="#000000" fill-rule="evenodd" d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"></path>
-      </svg>
-    </span>
-   ) or <strong>https://</strong> means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+                <br />
+                A <strong>lock</strong> (
+                <span class="icon-lock">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="52"
+                    height="64"
+                    viewBox="0 0 52 64"
+                    class="usa-banner__lock-image"
+                    role="img"
+                    aria-labelledby="banner-lock-description"
+                    focusable="false"
+                  >
+                    <title id="banner-lock-title">Lock</title>
+                    <desc id="banner-lock-description">Locked padlock</desc>
+                    <path
+                      fill="#000000"
+                      fill-rule="evenodd"
+                      d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z"
+                    ></path>
+                  </svg>
+                </span>
+                ) or <strong>https://</strong> means you’ve safely connected to
+                the .gov website. Share sensitive information only on official,
+                secure websites.
               </p>
             </div>
           </div>
         </div>
       </div>
-  
-      <div class="usa-banner__content usa-accordion__content" id="partners-banner" hidden="">
-        <!-- <p>Coordinated effort</p> -->
-        <div class="grid-row grid-gap-lg">
-          <div class="usa-banner__guidance tablet:grid-col-6">
-            <div class="usa-media-block__body">
-              <img src="{{static_url("extra-assets/images/logos/nasa.png") }}" alt='NASA logo' height="96" />
-              <img src="{{static_url("extra-assets/images/logos/epa.svg") }}" alt='EPA logo' height="76" />
-              <img src="{{static_url("extra-assets/images/logos/NIST-Logo-Brand-White.svg") }}" alt='NIST logo' height="36" />
-              <img src="{{static_url("extra-assets/images/logos/noaa.png") }}" alt='NOAA logo' height="96" />
+
+      <div
+        class="usa-banner__content usa-accordion__content"
+        id="partners-banner"
+        hidden=""
+      >
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            background-color: #ddd6d2;
+            color: #1b1b1b;
+            width: 100%;
+          "
+        >
+          <div style="margin: 0 124px 0 0; width: 25%">
+            <p>
+              The US GHG Center would not be possible without the collaboration
+              of the partnering U.S. governmental agencies and other
+              non-governmental entities. The initial partners of this effort are
+              NASA, EPA, NIST, and NOAA.
+            </p>
+          </div>
+          <div class="grid-row grid-gap-lg" style="flex: 1">
+            <div class="usa-banner__guidance tablet:grid-col-6">
+              <div class="usa-media-block__body">
+                <img
+                  src="{{static_url('extra-assets/images/logos/nasa.png')}}"
+                  alt="NASA logo"
+                />
+                <img
+                  src="{{static_url('extra-assets/images/logos/epa.svg')}}"
+                  alt="EPA logo"
+                />
+                <img
+                  src="{{static_url('extra-assets/images/logos/nist.svg')}}"
+                  alt="NIST logo"
+                />
+                <img
+                  src="{{static_url('extra-assets/images/logos/noaa.png')}}"
+                  alt="NOAA logo"
+                />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <!-- END CUSTOM TEMPLATE OUTPUT from 'themes/custom/project/uswds_carbon/templates/uswds/government-banner.html.twig' -->
-  
-  
-      </section>
-<nav class="navbar navbar-light">
+</section>
+<nav class="navbar navbar-light" style="justify-content: start">
   <div class="navbar-brand-wrapper">
     <a href="https://earth.gov/ghgcenter" target="_blank" rel="noopener">
       <!-- <div class="brand-logo">
@@ -117,34 +230,54 @@
     </a>
   </div>
 </nav>
-{% endblock %}
-
-{% block script %}
-{{ super() }}
+{% endblock %} {% block script %} {{ super() }}
 <script src="{{ static_url('extra-assets/js/login.js') }}"></script>
 <script src="{{ static_url('extra-assets/js/uswds.min.js') }}"></script>
-{% endblock %}
-
-{% block main %}
+{% endblock %} {% block main %}
 
 <!-- Modal -->
-<div class="modal fade" id="disclaimer-modal" tabindex="-1" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div
+  class="modal fade"
+  id="disclaimer-modal"
+  tabindex="-1"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
       <div class="modal-body">
-        This US GHG Center JupyterHub environment is provided to authorized users for performing cloud analyses and to access data from the Center. Users are advised to review the documentation associated with any data they use. Access dataset documentation using the Data Catalog of the US GHG Center.
+        This US GHG Center JupyterHub environment is provided to authorized
+        users for performing cloud analyses and to access data from the Center.
+        Users are advised to review the documentation associated with any data
+        they use. Access dataset documentation using the Data Catalog of the US
+        GHG Center.
       </div>
       <div class="modal-footer">
         <div class="container-fluid">
           <div class="row align-items-center">
             <div class="col-md-5 text-start">
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="disclaimer-modal-checkbox" checked>
-                <label class="form-check-label fw-light" for="disclaimer-modal-checkbox">Don't show this again</label>
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="disclaimer-modal-checkbox"
+                  checked
+                />
+                <label
+                  class="form-check-label fw-light"
+                  for="disclaimer-modal-checkbox"
+                  >Don't show this again</label
+                >
               </div>
             </div>
             <div class="col-md-7 text-end">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
             </div>
           </div>
         </div>
@@ -153,36 +286,81 @@
   </div>
 </div>
 
-<div class="container login-header" id="home" data-authenticator-login-url="{{authenticator_login_url}}">
+<div
+  class="container login-header"
+  id="home"
+  data-authenticator-login-url="{{authenticator_login_url}}"
+>
   <div class="row">
     <div class="logos col-12 text-center">
-      <img src="{{static_url('extra-assets/images/logos/nasa.png')}}" alt="NASA logo" height="96" />
-      <img src="{{static_url('extra-assets/images/logos/epa.svg')}}" alt="EPA logo" height="96" />
-      <img src="{{static_url('extra-assets/images/logos/nist.svg')}}" alt="NIST logo" height="36" />
-      <img src="{{static_url('extra-assets/images/logos/noaa.png')}}" alt="NOAA logo" height="96" />
+      <img
+        src="{{static_url('extra-assets/images/logos/nasa.png')}}"
+        alt="NASA logo"
+        height="96"
+      />
+      <img
+        src="{{static_url('extra-assets/images/logos/epa.svg')}}"
+        alt="EPA logo"
+        height="96"
+      />
+      <img
+        src="{{static_url('extra-assets/images/logos/nist.svg')}}"
+        alt="NIST logo"
+        height="36"
+      />
+      <img
+        src="{{static_url('extra-assets/images/logos/noaa.png')}}"
+        alt="NOAA logo"
+        height="96"
+      />
     </div>
   </div>
 
   <div class="row justify-content-center mx-auto">
-    <div class="col-md-12 card border-0">
+    <div class="col-md-12 border-0">
       <h1 class="lead text-center">
-        Welcome to the <a href="{{ custom.org.url }}">{{ custom.org.name }}</a> JupyterHub.
+        Welcome to the
+        <a href="{{ custom.org.url }}">{{ custom.org.name }}</a> JupyterHub.
       </h1>
       <p class="text-center">
-        <span id="new-user"> New user? </span> Please see our documentation about <a href="https://us-ghg-center.github.io/ghgc-docs/services/jupyterhub.html">how to request access</a>.
+        <span id="new-user"> New user? </span> Please see our documentation
+        about
+        <a
+          href="https://us-ghg-center.github.io/ghgc-docs/services/jupyterhub.html"
+          >how to request access</a
+        >.
       </p>
-    <div class="login-container text-center">
-      <a role="button" id="login-button" class='btn btn-jupyter btn-lg' href='{{authenticator_login_url}}'>
-        Log in to continue <img src="{{ static_url('extra-assets/img/uswds-icons/chevron_right.svg') }}" alt="" class="uswds-icon" style="filter:invert(99%) sepia(0%) saturate(0%) hue-rotate(13deg) brightness(102%) contrast(104%);vertical-align:middle;"> 
-      </a>
+      <div class="login-container text-center">
+        <a
+          role="button"
+          id="login-button"
+          class="btn btn-jupyter btn-lg"
+          href="{{authenticator_login_url}}"
+        >
+          Log in to continue
+          <img
+            src="{{ static_url('extra-assets/img/uswds-icons/chevron_right.svg') }}"
+            alt=""
+            class="uswds-icon"
+            style="
+              filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(13deg)
+                brightness(102%) contrast(104%);
+              vertical-align: middle;
+            "
+          />
+        </a>
+      </div>
     </div>
-  </div>
   </div>
 
   <div class="row">
     <div class="footer col-12 text-center">
       <p>
-        This service is run transparently from <a href="https://github.com/2i2c-org/infrastructure">github.com/2i2c-org/infrastructure</a> by <a href="https://2i2c.org">2i2c.org</a>
+        This service is run transparently from
+        <a href="https://github.com/2i2c-org/infrastructure"
+          >github.com/2i2c-org/infrastructure</a
+        >
+        by <a href="https://2i2c.org">2i2c.org</a>
       </p>
       <p>
         Built with
