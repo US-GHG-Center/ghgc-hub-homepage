@@ -132,6 +132,11 @@
     z-index: 2;
 }
 
+.usa-banner__button::after {
+    background-color: #dfe1e2;
+    mask-image: url("https://cdnjs.cloudflare.com/ajax/libs/uswds/3.13.0/img/usa-icons/expand_more.svg");
+}
+
 /* Responsive adjustments */
 @media screen and (max-width: 640px) {
     .usa-banner__header::before {
