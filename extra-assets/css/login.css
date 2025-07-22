@@ -19,6 +19,11 @@
     font-weight: bold;
 }
 
+[data-bs-theme="dark"] #operated-by a {
+    color: lightgray;
+    font-weight: bold;
+}
+
 #new-user {
     font-weight: bold;
 }
@@ -85,5 +90,5 @@ div.login-header img.hub-logo {
 }
 
 .logos {
-    padding: 64px;
+    padding: 128px 64px 0 64px;
 }
